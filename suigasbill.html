@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SuiGas-Bill</title>
+	<style>
+		.container{
+			width: 99vw;
+			height: 200vh;
+		}
+		.suigas-bluebox{
+			width: 80vw;
+			height: 15vh;
+			background-color: darkblue;
+			margin-left: 6vw;
+			margin-top: 2vh;
+		}
+		.suigas-logo img{
+			width:7.5vw;
+			height: 15.5vh;
+			margin-left: 1vw;
+		}
+		.suigasbluebox-row{
+			display: flex;
+		}
+		.suigaspipeline{
+			color: white;
+			margin-left: 1vw;
+		}
+		.suigas-whitebox{
+			width: 33vw;
+			height: 12vh;
+			background-color: white;
+			margin-left: 2vw;
+			margin-top: 2vh;
+			border-radius: 4%;
+		}
+		.suigas-text{
+			margin-left: 4vw;
+		}
+		.suigas-num{
+			margin-left: 14vw;
+		}
+		.name{
+			margin-left:6vw ;
+		}
+		.name-row2{
+			display: flex;
+		}
+		.maslam{
+			margin-left: 5vw;
+		}
+		.name-line{
+			width: 37vw;
+			height: .2vh;
+			background-color: black;
+			margin-left: 14vw;
+		}
+		.address{
+			margin-left:6vw ;
+		}
+		.address-row{
+			display: flex;
+		}
+		.sallahdita{
+			margin-left: 4vw;
+		}
+		.address-line{
+			width: 37vw;
+			height: .2vh;
+			background-color: black;
+			margin-left: 14vw;
+		}
+		.cb2165{
+			margin-left: 14vw;
+		}
+		.cb-line{
+			width: 37vw;
+			height: .2vh;
+			background-color: black;
+			margin-left: 14vw;
+		}
+		.lalazar{
+			margin-left: 14vw;
+		}
+		.lalazar-line{
+			width: 37vw;
+			height: .2vh;
+			background-color: black;
+			margin-left: 14vw;
+		}
+		.wahcant{
+			margin-left: 14vw;
+		}
+		.wahcant-line{
+			width: 37vw;
+			height: .2vh;
+			background-color: black;
+			margin-left: 14vw;
+		}
+		.accountid{
+			margin-left: 7vw;
+		}
+		.accountid-row1{
+			display: flex;
+		}
+		.billid{
+			margin-left: 12vw;
+		}
+		.bill-line{
+			width: 44.6vw;
+			height: .2vh;
+			background-color: black;
+			margin-left: 6.5vw;
+			margin-top: 0.3;
+		}
+		.consumergst{
+			margin-left: 7vw;
+		}
+		.consumer-line{
+			width: 44.6vw;
+			height: .2vh;
+			background-color: black;
+			margin-left: 6.5vw;
+			margin-top: 0.3;
+		}
+		.zone{
+			margin-left: 7vw;
+		}
+		.zone-row{
+			display: flex;
+		}
+		.zoneid{
+			margin-left: 12vw;
+		}
+		.zone-line{
+			width: 44.6vw;
+			height: .2vh;
+			background-color: black;
+			margin-left: 6.5vw;
+			margin-top: 0.3;
+		}
+		.security{
+			margin-left: 7vw;
+		}
+		.security-line{
+			width: 44.6vw;
+			height: .2vh;
+			background-color: black;
+			margin-left: 6.5vw;
+			margin-top: 0.3;
+		}
+		.amountid-box1{
+			width:10vw;
+			height: 4vh;
+			background-color: lightblue;
+			display: flex;
+		}
+		.tarif-box{
+			width:50vw;
+			height: 54vh;
+			background-color: lightblue;
+			margin-left: 5vw;
+			border-radius: 10%;
+		}
+		.tarif-box0{
+			width:50vw;
+			height: 7vh;
+			background-color:deepskyblue;
+			border-radius: 12%;
+		}
+		.tariff{
+			margin-left: 2vw;
+			color: white;
+		}
+		.tarif-row1{
+			display: flex;
+		}
+		.tarif-whitebox{
+			width:17vw;
+			height: 5vh;
+			background-color: white;
+			margin-left: 3vw;
+			margin-top: 1vh;
+		}
+		.domg{
+			text-align: center;
+			margin-top: 1vh;
+		}
+        .meterreading{
+        	color: white;
+        	margin-left: 3vw;
+        }
+        .meterno{
+        	margin-left: 2vw;
+        }
+        .meterno-row{
+        	display: flex;
+        }
+        .current{
+        	margin-left: 7vw;
+        }
+         .previous{
+        	margin-left: 9vw;
+        }
+         .difference{
+        	margin-left: 11vw;
+        }
+        .mrno{
+        	margin-left: 2vw;
+        	margin-top: 1vh;
+        }
+        .mr-row{
+        	display: flex;
+        }
+        .current-no{
+        	margin-left: 6vw;
+        	margin-top: 1vh;
+        }
+         .previous-no{
+        	margin-left: 8vw;
+        	margin-top: 1vh;
+        }
+         .difference-no{
+        	margin-left: 11vw;
+        	margin-top: 1vh;
+        }
+         .diffline{
+        	width: 46vw;
+        	height: .2vh;
+        	background-color: black;
+            margin-top: 1vh;
+            margin-left: 2vw;
+        }
+        .period{
+        	margin-left: 2vw;
+        	margin-top: 1vh;
+        }
+        .period-row{
+        	display: flex;
+        }
+        .pressfactor{
+        	margin-left: 9vw;
+        	margin-top: 1vh;
+        }
+        .factorno{
+        	margin-left: 22vw;
+        	margin-top: 1vh;
+        }
+        .periodline{
+        	width: 34vw;
+        	height: .2vh;
+        	background-color: black;
+            margin-top: 1vh;
+            margin-left: 14vw;
+        }
+        .from-box{
+        	width:12vw;
+        	height: 4vh;
+        	background-color: white;
+        	margin-left: 2vw;
+        }
+        .from{
+        	margin-left: 2vw;
+        	margin-top: 1vh;
+        }
+        .from-row{
+        	display: flex;
+        }
+        .tempfactor{
+        	margin-left: 1vw;
+        	margin-top: 1vh;
+        }
+        .tempno{
+        	margin-left: 22vw;
+        	margin-top: 1vh;
+        }
+        .fromline{
+        	width: 34vw;
+        	height: .2vh;
+        	background-color: black;
+            margin-top: 1vh;
+            margin-left: 14vw;
+        }
+         .fromdate-box{
+        	width:12vw;
+        	height: 4vh;
+        	background-color: white;
+        	margin-left: 2vw;
+        }
+        .from-date{
+        	margin-left: 6vw;
+        	margin-top: 1vh;
+        }
+        .fromdate-row{
+        	display: flex;
+        }
+        .super{
+        	margin-left: 1vw;
+        	margin-top: 1vh;
+        }
+        .superno{
+        	margin-left: 17vw;
+        	margin-top: 1vh;
+        }
+        .supline{
+        	width: 34vw;
+        	height: .2vh;
+        	background-color: black;
+            margin-top: 1vh;
+            margin-left: 14vw;
+        }
+        .to-box{
+        	width:12vw;
+        	height: 4vh;
+        	background-color: white;
+        	margin-left: 2vw;
+        }
+        .to{
+        	margin-left: 2vw;
+        	margin-top: 1vh;
+        }
+        .to-row{
+        	display: flex;
+        }
+        .gas{
+        	margin-left: 1vw;
+        	margin-top: 1vh;
+        }
+        .gasno{
+        	margin-left: 22vw;
+        	margin-top: 1vh;
+        }
+        .gasline{
+        	width: 34vw;
+        	height: .2vh;
+        	background-color: black;
+            margin-top: 1vh;
+            margin-left: 14vw;
+        }
+         .todate-box{
+        	width:12vw;
+        	height: 4vh;
+        	background-color: white;
+        	margin-left: 2vw;
+        }
+        .todate{
+        	margin-left: 6vw;
+        	margin-top: 1vh;
+        }
+        .todate-row{
+        	display: flex;
+        }
+        .mmb{
+        	margin-left: 12vw;
+        	margin-top: 1vh;
+        }
+        .mmbno{
+        	margin-left: 12vw;
+        	margin-top: 1vh;
+        }
+        .mmbline{
+        	width: 34vw;
+        	height: .2vh;
+        	background-color: black;
+            margin-top: 1vh;
+            margin-left: 14vw;
+        }
+         .issue-box{
+        	width:12vw;
+        	height: 4vh;
+        	background-color: white;
+        	margin-left: 2vw;
+        }
+        .issue{
+        	margin-left: 2vw;
+        	margin-top: 1vh;
+        }
+        .issue-row{
+        	display: flex;
+        }
+        .gcv{
+        	margin-left: 1vw;
+        	margin-top: 1vh;
+        }
+        .gcvno{
+        	margin-left: 22vw;
+        	margin-top: 1vh;
+        }
+        .gcvline{
+        	width: 34vw;
+        	height: .2vh;
+        	background-color: black;
+            margin-top: 1vh;
+            margin-left: 14vw;
+        }
+         .issuedate-box{
+        	width:12vw;
+        	height: 8vh;
+        	background-color: white;
+        	margin-left: 2vw;
+        }
+        .issuedate{
+        	margin-left: 6vw;
+        	margin-top: 1vh;
+        }
+        .issuedate-row{
+        	display: flex;
+        }
+        .mmbtu{
+        	margin-left: 12vw;
+        	margin-top: 1vh;
+        }
+        .notification-box{
+        	width:14vw;
+        	height: 4vh;
+        	background-color: deepskyblue;
+        	margin-left: 2vw;
+        }
+        .notification{
+        	color: white;
+        	margin-left: 1vw;
+        }
+		.tarifbox-row{
+			display: flex;
+		}
+		.tarif-box1{
+			width:30vw;
+			height: 67vh;
+			background-color: lightblue;
+			margin-left: 2vw;
+			border-radius: 10%;
+		}
+		.current-box{
+			width:30vw;
+			height: 7vh;
+			background-color: deepskyblue;
+			border-radius: 10%;
+		}
+        .currentcharges{
+        	color: white;
+        	margin-left: 1vw;
+        	font-size: 4vh;
+        }
+        .gascharges{
+        	margin-top: 8vh;
+        }
+        .gascharges-row{
+        	display: flex;
+        }
+        .gascharges-amount{
+        	margin-left: 20vw;
+        	margin-top: 8vh;
+        }
+        .gas-line{
+        	width: 30vw;
+        	height: .2vh;
+        	background-color: black;
+        }
+        .prov-row{
+        	display: flex;
+        }
+        .prov-amount{
+        	margin-left: 17vw;
+        }
+        .prov-line{
+        	width: 30vw;
+        	height: .2vh;
+        	background-color: black;
+        }
+        .meterrent-row{
+        	display: flex;
+        }
+        .meterrent-amount{
+        	margin-left: 21vw;
+        }
+        .meterrent-line{
+        	width: 30vw;
+        	height: .2vh;
+        	background-color: black;
+        }
+        .gst-row{
+        	display: flex;
+        }
+        .gst-amount{
+        	margin-left: 24vw;
+        }
+        .gst-line{
+        	width: 30vw;
+        	height: .2vh;
+        	background-color: black;
+        }
+         .rebate-row{
+        	display: flex;
+        }
+        .rebate-amount{
+        	margin-left: 18vw;
+        }
+        .rebate-line{
+        	width: 30vw;
+        	height: .2vh;
+        	background-color: black;
+        }
+         .oc-row{
+        	display: flex;
+        }
+        .oc-amount{
+        	margin-left: 20vw;
+        }
+        .oc-line{
+        	width: 30vw;
+        	height: .2vh;
+        	background-color: black;
+        }
+         .aging-row{
+        	display: flex;
+        }
+        .aging-amount{
+        	margin-left: 18.5vw;
+        }
+        .aging-line{
+        	width: 30vw;
+        	height: .2vh;
+        	background-color: black;
+        }
+         .currentbill-row{
+        	display: flex;
+        }
+        .currentbill-amount{
+        	margin-left: 24vw;
+        }
+        .currentbill-line{
+        	width: 30vw;
+        	height: .2vh;
+        	background-color: black;
+        }
+         .latepayment-row{
+        	display: flex;
+        }
+        .latepayment-amount{
+        	margin-left: 20vw;
+        }
+        .latepayment-line{
+        	width: 30vw;
+        	height: .2vh;
+        	background-color: black;
+        }
+         .tad-row{
+        	display: flex;
+        }
+        .tad-amount{
+        	margin-left: 18vw;
+        }
+        .tad-line{
+        	width: 30vw;
+        	height: .2vh;
+        	background-color: black;
+        }
+        .payment-box{
+        	width:32vw;
+        	height: 58vh;
+        	background-color: lightblue;
+        	margin-left: 57vw;
+        	margin-top: 7vh;
+        	border-radius: 10%;
+        }
+        .payment-historybox{
+        	width: 32vw;
+        	height: 7vh;
+        	background-color: deepskyblue;
+        	border-radius: 10%;
+        }
+        .paymenthistory{
+        	color: white;
+        	margin-left: 2vw;
+        	font-size: 5vh;
+        }
+        .month{
+        	margin-left: 1vw;
+        }
+        .mhc-row{
+        	display: flex;
+        }
+        .hv3{
+        	margin-left: 3vw;
+        }
+        .cb{
+        	margin-left: 2vw;
+        }
+        .ad{
+        	margin-left: 2vw;
+        }
+        .payment{
+        	margin-left: 2vw;
+        }
+        .month-box1{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .mhc-row1{
+        	display: flex;
+        }
+         .hv3-box1{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .cb-box1{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .ad-box1{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .payment-box1{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+         .month-box2{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .mhc-row2{
+        	display: flex;
+        }
+         .hv3-box2{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .cb-box2{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .ad-box2{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .payment-box2{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+         .month-box3{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .mhc-row3{
+        	display: flex;
+        }
+         .hv3-box3{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .cb-box3{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .ad-box3{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .payment-box3{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+         .month-box4{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .mhc-row4{
+        	display: flex;
+        }
+         .hv3-box4{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .cb-box4{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .ad-box4{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .payment-box4{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+         .month-box5{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .mhc-row5{
+        	display: flex;
+        }
+         .hv3-box5{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .cb-box5{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .ad-box5{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .payment-box5{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+         .month-box6{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .mhc-row6{
+        	display: flex;
+        }
+         .hv3-box6{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .cb-box6{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .ad-box6{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .payment-box6{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+         .month-box7{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .mhc-row7{
+        	display: flex;
+        }
+         .hv3-box7{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .cb-box7{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .ad-box7{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .payment-box7{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+         .month-box8{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .mhc-row8{
+        	display: flex;
+        }
+         .hv3-box8{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .cb-box8{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .ad-box8{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .payment-box8{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+         .month-box9{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .mhc-row9{
+        	display: flex;
+        }
+         .hv3-box9{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .cb-box9{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .ad-box9{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .payment-box9{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+         .month-box10{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .mhc-row10{
+        	display: flex;
+        }
+         .hv3-box10{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .cb-box10{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .ad-box10{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .payment-box10{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        } .month-box11{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .mhc-row11{
+        	display: flex;
+        }
+         .hv3-box11{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .cb-box11{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .ad-box11{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .payment-box11{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+         .month-box12{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .mhc-row12{
+        	display: flex;
+        }
+         .hv3-box12{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .cb-box12{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .ad-box12{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .payment-box12{
+        	width:7vw;
+        	height: 3vh;
+        	border: 2px solid black;
+        }
+        .energy-text{
+        	margin-left: 6vw;
+        	margin-top: 3vh;
+        }
+        .energy-row{
+        	display: flex;
+        }
+        .energy-box{
+        	width: 17vw;
+        	height: 15vh;
+        	border: 2px solid black;
+        	margin-left: 6vw;
+        }
+        .energy-text1{
+        	text-align: center;
+        	margin-top: 3vh;
+        }
+        .dom-box1{
+        	width:19vw;
+        	height: 35vh;
+        	border: 2px solid black;
+        	margin-left: 1vw;
+        }
+        .dom{
+        	text-align: center;
+        }
+        .dom-line1{
+        	width:19vw;
+        	height: .2vh;
+        	background-color: black;
+        }
+         .gas-line1{
+        	width:19vw;
+        	height: .2vh;
+        	background-color: black;
+        }
+        .gasrates{
+        	margin-left: 2vw;
+        }
+        .slab-box0{
+        	width:2.5vw;
+        	height: 5.5vh;
+        	border: 1px solid black;
+        }
+        .slabno0{
+        	margin-left: 1vw;
+        }
+        .slab-row{
+        	display: flex;
+        }
+        .usage-box{
+        	width:6vw;
+        	height: 5.5vh;
+        	border: 1px solid black;
+        	display: flex;
+        }
+        .allofftakes-box{
+        	width:10vw;
+        	height: 5.5vh;
+        	border: 1px solid black;
+        	display: flex;
+        }
+        .slab-box1{
+        	width:2.5vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        }
+        .slabno1{
+        	margin-left: 1vw;
+        }
+        .slab-row1{
+        	display: flex;
+        }
+        .usage-box1{
+        	width:6vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        	display: flex;
+        }
+        .allofftakes-box1{
+        	width:10vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        	display: flex;
+        }
+        .alloff-takes1{
+        	margin-left: 4vw;
+        }
+         .slab-box2{
+        	width:2.5vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        }
+        .slabno2{
+        	margin-left: 1vw;
+        }
+        .slab-row2{
+        	display: flex;
+        }
+        .usage-box2{
+        	width:6vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        	display: flex;
+        }
+        .allofftakes-box2{
+        	width:10vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        	display: flex;
+        }
+        .alloff-takes2{
+        	margin-left: 4vw;
+        }
+         .slab-box3{
+        	width:2.5vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        }
+        .slabno3{
+        	margin-left: 1vw;
+        }
+        .slab-row3{
+        	display: flex;
+        }
+        .usage-box3{
+        	width:6vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        	display: flex;
+        }
+        .allofftakes-box3{
+        	width:10vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        	display: flex;
+        }
+        .alloff-takes3{
+        	margin-left: 4vw;
+        }
+         .slab-box4{
+        	width:2.5vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        }
+        .slabno4{
+        	margin-left: 1vw;
+        }
+        .slab-row4{
+        	display: flex;
+        }
+        .usage-box4{
+        	width:6vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        	display: flex;
+        }
+        .allofftakes-box4{
+        	width:10vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        	display: flex;
+        }
+        .alloff-takes4{
+        	margin-left: 4vw;
+        }
+        .slab-box5{
+        	width:2.5vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        }
+        .slabno5{
+        	margin-left: 1vw;
+        }
+        .slab-row5{
+        	display: flex;
+        }
+        .usage-box5{
+        	width:6vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        	display: flex;
+        }
+        .allofftakes-box5{
+        	width:10vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        	display: flex;
+        }
+        .alloff-takes5{
+        	margin-left: 4vw;
+        }
+        .slab-box6{
+        	width:2.5vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        }
+        .slabno6{
+        	margin-left: 1vw;
+        }
+        .slab-row6{
+        	display: flex;
+        }
+        .usage-box6{
+        	width:6vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        	display: flex;
+        }
+        .allofftakes-box6{
+        	width:10vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        	display: flex;
+        }
+        .alloff-takes6{
+        	margin-left: 4vw;
+        }
+        .slab-box7{
+        	width:2.5vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        }
+        .slabno7{
+        	margin-left: 1vw;
+        }
+        .slab-row7{
+        	display: flex;
+        }
+        .usage-box7{
+        	width:6vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        	display: flex;
+        }
+        .allofftakes-box7{
+        	width:10vw;
+        	height: 2.5vh;
+        	border: 1px solid black;
+        	display: flex;
+        }
+        .alloff-takes7{
+        	margin-left: 4vw;
+        }
+        .usageofgas-based{
+        	margin-left: 2vw;
+        }
+        .dotted-line{
+        	width: 90vw;
+        	border-bottom: dotted;
+        	background-color: black;
+        	margin-top: 2vh;
+        	margin-left: 4vw;
+        }
+        .suigas-text1{
+        	margin-left: 8vw;
+        }
+        .amountid1{
+        	margin-top: 4vh;
+        	margin-left: 5vw;
+        }
+        .amount-id1{
+        	margin-left: 13vw;
+        }
+         .bm1{
+        	margin-left: 5vw;
+        }
+        .dec2018{
+        	margin-left: 13vw;
+        }
+         .name1{
+        	margin-left: 5vw;
+        }
+        .maslam{
+        	margin-left: 13vw;
+        }
+        .last-row{
+        	display: flex;
+        }
+        .blank-box{
+        	width: 17vw;
+        	height: 16vh;
+        	border: 2px solid grey;
+        	margin-left: 26vw;
+        }
+        .ami{
+        	margin-left: 8vw;
+        }
+        .id1{
+        	margin-left: 12vw;
+        }
+        .pwd-box{
+        	width: 10vw;
+        	height: 7vh;
+        	background-color: purple;
+        	margin-left: 50vw;
+        	border-radius: 15%;
+        }
+        .pwd-text{
+        	margin-left: 1vw;
+        }
+        .pwd-row{
+        	display: flex;
+        }
+         .pwd-box1{
+        	width: 10vw;
+        	height: 7vh;
+        	background-color: deepskyblue;
+        	margin-left: 7vw;
+        	border-radius: 15%;
+        }
+        .pwd-text1{
+        	margin-left: 1vw;
+        }
+         .pwd-box2{
+        	width: 10vw;
+        	height: 7vh;
+        	background-color: peachpuff;
+        	margin-left: 5vw;
+        	border-radius: 15%;
+        }
+        .pwd-text2{
+        	margin-left: 1vw;
+        }
+         .pwd-text3{
+        	margin-left: 53vw;
+        }
+        .pwd-row1{
+        	display: flex;
+        }
+         .pwd-text4{
+        	margin-left: 15vw;
+        }
+         .pwd-text5{
+        	margin-left: 11.5vw;
+        }
+        .line{
+        	width: 90vw;
+        	height: .2vh;
+        	background-color: black;
+        	margin-left: 4vw;
+        }
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="suigas-bluebox">
+			<div class="suigasbluebox-row">
+				<div class="suigas-logo">
+					<img src="C:\Users\user\Desktop/suigaslogo-removebg-preview.png">
+				</div>
+				<div class="suigaspipeline"><h2>SUI NORTHERN GAS PIPELINE LIMITED</h2></div>
+				<div class="suigas-whitebox">
+					<div class="suigas-text">
+							<b>
+							H.NO.786 MODEL TOWN PHASE-1
+							<br/>
+							NR.BHATAR MORE,WAH CANNT
+						   </b>
+						   <div class="suigas-num">051-4916386</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="name-row1">
+		
+			<div class="name-row2">
+				<div class="name">Name:</div>
+				<div class="maslam">M ASLAM</div>
+			</div>
+			<div class="name-line">
+			</div>
+			<div class="address-row">
+				<div class="address">Address:</div>
+				<div class="sallahdita">S/ALLAH DITA</div>
+			</div>
+			<div class="address-line">
+			</div>
+			<div class="cb2165">CB-216/5</div>
+			<div class="cb-line">
+			</div>
+			<div class="lalazar">LALAZAR COLONY JINNAH ROAD</div>
+			<div class="lalazar-line">
+			</div>
+			<div class="wahcant">WAH CANTT</div>
+			<div class="wahcant-line">
+			</div>
+			<div class="accountid-row1">
+				<div class="accountid">Account ID   <b>2394843006</b></div>
+				<div class="billid">Bill ID  239058265975</div>
+			</div>
+			<div class="bill-line">
+			</div>
+			<div class="consumergst">Consumer GST/NTN    /</div>
+			<div class="consumer-line">
+			</div>
+			<div class="zone-row">
+				<div class="zone">Zone/Postal Code(Service Cycle)/Book Page No </div>
+				<div class="zoneid">7433/306/15</div>
+			</div>
+			<div class="zone-line">
+			</div>
+			<div class="security">Security Deposit(Cash/Bank)    15000/0</div>
+			<div class="security-line">
+			</div>
+		<div class="tarifbox-row">
+			<div class="tarif-box">
+				<div class="tarif-box0">
+					 <div class="tarif-row1">
+					 	<div class="tariff"><b>Tarrif</b></div>
+					 	<div class="tarif-whitebox">
+					 		<div class="domg">DOM-G</div>
+					 	</div>
+					 	<div class="meterreading"><h3>Meter Reading</h3></div>
+			         </div>
+			    </div>
+			    <div class="meterno-row">
+			    	<div class="meterno">Meter No.</div>
+			    	<div class="current">Current</div>
+			    	<div class="previous">Previous</div>
+			    	<div class="difference">Difference</div>
+			    </div>
+			     <div class="mr-row">
+			    	<div class="mrno">MR03328601</div>
+			    	<div class="current-no">010113.1</div>
+			    	<div class="previous-no">0000972</div>
+			    	<div class="difference-no">000141.1</div>
+			    </div>
+			    <div class="diffline">
+			    </div>
+			     <div class="period-row">
+			    	<div class="period">Period</div>
+			    	<div class="pressfactor">Press/factor:</div>
+			    	<div class="factorno">0.56/1.0382</div>
+			    </div>
+			    <div class="periodline">
+			    </div>
+			     <div class="from-row">
+			     	<div class="from-box">
+			    	<div class="from">From</div>
+			        </div>
+			    	<div class="tempfactor">Temp/factor:</div>
+			    	<div class="tempno">0/0</div>
+			    </div>
+			    <div class="fromline">
+			    </div>
+			     <div class="fromdate-row">
+			     	<div class="fromdate-box">
+			    	<div class="from-date">29-11-2018</div>
+			        </div>
+			    	<div class="super">Super Compressibility</div>
+			    	<div class="superno">0.0000</div>
+			    </div>
+			    <div class="supline">
+			    </div>
+			     <div class="to-row">
+			     	<div class="to-box">
+			    	<div class="to">To</div>
+			        </div>
+			    	<div class="gas">Gas Consumed HV3</div>
+			    	<div class="superno">1,465</div>
+			    </div>
+			    <div class="gasline">
+			    </div>
+			     <div class="todate-row">
+			     	<div class="todate-box">
+			    	<div class="todate">28-12-2018</div>
+			        </div>
+			    	<div class="mmb">MMBTU</div>
+			    	<div class="mmbno">5,454</div>
+			    </div>
+			    <div class="mmbline">
+			    </div>
+			     <div class="issue-row">
+			     	<div class="issue-box">
+			    	<div class="issue">Issue Date</div>
+			        </div>
+			    	<div class="gcv">GCV</div>
+			    	<div class="gcvno">1049</div>
+			    </div>
+			    <div class="mmbline">
+			    </div>
+			     <div class="issuedate-row">
+			     	<div class="issuedate-box">
+			    	<div class="issuedate">01-01-2019</div>
+			        </div>
+			    	<div class="mmbtu">MMBTU=(HIV*GCV/281.7395)</div>
+			    </div>
+			    <div class="notification-box">
+			    	<div class="notification"><h2>Notification</h2></div>
+			    </div>
+			</div>
+
+			<div class="tarif-box1">
+				<div class="current-box">
+					<div class="currentcharges">Current Charges</div>
+			    </div>
+			    <div class="gascharges-row">
+			    	<div class="gascharges">Gas Charges</div>
+			    	<div class="gascharges-amount">1439.99</div>
+			    </div>
+			    <div class="gas-line">
+			    </div>
+			     <div class="prov-row">
+			    	<div class="prov">Prov.Bill Adjustment</div>
+			    	<div class="prov-amount">0</div>
+			    </div>
+			    <div class="prov-line">
+			    </div>
+			     <div class="meterrent-row">
+			    	<div class="meterrent">Meter Rent</div>
+			    	<div class="meterrent-amount">19.33</div>
+			    </div>
+			    <div class="meterrent-line">
+			    </div>
+			     <div class="gst-row">
+			    	<div class="gst">GST</div>
+			    	<div class="gst-amount">248.99</div>
+			    </div>
+			    <div class="gst-line">
+			    </div>
+			    <div class="rebate-row">
+			    	<div class="rebate">Rebate/Adjustment</div>
+			    	<div class="rebate-amount">0.00</div>
+			    </div>
+			    <div class="rebate-line">
+			    </div>
+			    <div class="oc-row">
+			    	<div class="oc">Other Charges</div>
+			    	<div class="oc-amount">0.00</div>
+			    </div>
+			    <div class="oc-line">
+			    </div>
+			    <div class="aging-row">
+			    	<div class="aging">Arrears / Aging</div>
+			    	<div class="aging-amount">-0.49/0</div>
+			    </div>
+			    <div class="aging-line">
+			    </div>
+			    <div class="currentbill-row">
+			    	<div class="currentbill">GST</div>
+			    	<div class="currentbill-amount">1707.49</div>
+			    </div>
+			    <div class="currentbill-line">
+			    </div>
+			    <div class="latepayment-row">
+			    	<div class="latepayment">Late Payment<br/>Surcharge (Rs)</div>
+			    	<div class="latepayment-amount">0.00</div>
+			    </div>
+			    <div class="latepayment-line">
+			    </div>
+			    <div class="tad-row">
+			    	<div class="tad">Total Amount Due</div>
+			    	<div class="tad-amount">1710</div>
+			    </div>
+			    <div class="tad-line">
+			    </div>
+			</div>
+		</div>
+		<div class="payment-box">
+			<div class="payment-historybox">
+				<div class="paymenthistory">Payment History</div>
+			</div>
+			<div class="mhc-row">
+				<div class="month">Month</div>
+				<div class="hv3">HV3</div>
+				<div class="cb">Current Bill</div>
+				<div class="ad">Amount Due</div>
+				<div class="payment">Payment</div>
+			</div>
+			<div class="mhc-row1">
+				<div class="month-box1">
+					<div class="month1">Nov 2018</div>
+				</div>
+				<div class="hv3-box1">
+					<div class="hv31">0.519</div>
+				</div>
+				<div class="cb-box1">
+					<div class="cb1">311.80</div>
+				</div>
+				<div class="ad-box1">
+					<div class="ad1">310</div>
+				</div>
+				<div class="payment-box1">
+					<div class="payment1">310</div>
+				</div>
+			</div>
+			<div class="mhc-row2">
+				<div class="month-box2">
+					<div class="month2">Oct 2018</div>
+				</div>
+				<div class="hv3-box2">
+					<div class="hv32">0.446</div>
+				</div>
+				<div class="cb-box2">
+					<div class="cb2">261.74</div>
+				</div>
+				<div class="ad-box2">
+					<div class="ad2">260</div>
+				</div>
+				<div class="payment-box2">
+					<div class="payment2">260</div>
+				</div>
+			</div>
+			<div class="mhc-row3">
+				<div class="month-box3">
+					<div class="month3">Sep 2018</div>
+				</div>
+				<div class="hv3-box3">
+					<div class="hv33">0.270</div>
+				</div>
+				<div class="cb-box3">
+					<div class="cb3">197.15</div>
+				</div>
+				<div class="ad-box3">
+					<div class="ad3">200</div>
+				</div>
+				<div class="payment-box3">
+					<div class="payment3">200</div>
+				</div>
+			</div>
+			<div class="mhc-row4">
+				<div class="month-box4">
+					<div class="month4">Aug 2018</div>
+				</div>
+				<div class="hv3-box4">
+					<div class="hv34">0.353</div>
+				</div>
+				<div class="cb-box4">
+					<div class="cb4">192.63</div>
+				</div>
+				<div class="ad-box4">
+					<div class="ad4">190</div>
+				</div>
+				<div class="payment-box4">
+					<div class="payment4">190</div>
+				</div>
+			</div>
+			<div class="mhc-row5">
+				<div class="month-box5">
+					<div class="month5">Jul 2018</div>
+				</div>
+				<div class="hv3-box5">
+					<div class="hv35">0.675</div>
+				</div>
+				<div class="cb-box5">
+					<div class="cb5">353.29</div>
+				</div>
+				<div class="ad-box5">
+					<div class="ad5">360</div>
+				</div>
+				<div class="payment-box5">
+					<div class="payment5">360</div>
+				</div>
+			</div>
+			<div class="mhc-row6">
+				<div class="month-box6">
+					<div class="month3">Jun 2018</div>
+				</div>
+				<div class="hv3-box6">
+					<div class="hv36">0.270</div>
+				</div>
+				<div class="cb-box6">
+					<div class="cb6">197.15</div>
+				</div>
+				<div class="ad-box6">
+					<div class="ad3">280</div>
+				</div>
+				<div class="payment-box6">
+					<div class="payment6">260</div>
+				</div>
+			</div>
+			<div class="mhc-row7">
+				<div class="month-box7">
+					<div class="month7">May 2018</div>
+				</div>
+				<div class="hv3-box7">
+					<div class="hv37">0.270</div>
+				</div>
+				<div class="cb-box7">
+					<div class="cb7">197.15</div>
+				</div>
+				<div class="ad-box7">
+					<div class="ad7">500</div>
+				</div>
+				<div class="payment-box7">
+					<div class="payment7">500</div>
+				</div>
+			</div>
+			<div class="mhc-row8">
+				<div class="month-box8">
+					<div class="month8">April 2018</div>
+				</div>
+				<div class="hv3-box8">
+					<div class="hv38">0.270</div>
+				</div>
+				<div class="cb-box8">
+					<div class="cb8">297.15</div>
+				</div>
+				<div class="ad-box8">
+					<div class="ad8">800</div>
+				</div>
+				<div class="payment-box8">
+					<div class="payment8">800</div>
+				</div>
+			</div>
+			<div class="mhc-row9">
+				<div class="month-box9">
+					<div class="month9">March 2018</div>
+				</div>
+				<div class="hv3-box9">
+					<div class="hv39">0.270</div>
+				</div>
+				<div class="cb-box9">
+					<div class="cb9">197.15</div>
+				</div>
+				<div class="ad-box9">
+					<div class="ad9">1000</div>
+				</div>
+				<div class="payment-box9">
+					<div class="payment9">1000</div>
+				</div>
+			</div>
+			<div class="mhc-row10">
+				<div class="month-box10">
+					<div class="month10">Feb 2018</div>
+				</div>
+				<div class="hv3-box10">
+					<div class="hv310">0.270</div>
+				</div>
+				<div class="cb-box10">
+					<div class="cb10">147.15</div>
+				</div>
+				<div class="ad-box10">
+					<div class="ad10">200</div>
+				</div>
+				<div class="payment-box10">
+					<div class="payment10">200</div>
+				</div>
+			</div>
+			<div class="mhc-row11">
+				<div class="month-box11">
+					<div class="month11">Jan 2018</div>
+				</div>
+				<div class="hv3-box11">
+					<div class="hv311">0.470</div>
+				</div>
+				<div class="cb-box11">
+					<div class="cb11">597.15</div>
+				</div>
+				<div class="ad-box11">
+					<div class="ad11">11200</div>
+				</div>
+				<div class="payment-box11">
+					<div class="payment11">11200</div>
+				</div>
+			</div>
+			<div class="mhc-row12">
+				<div class="month-box12">
+					<div class="month12">Dec 2017</div>
+				</div>
+				<div class="hv3-box12">
+					<div class="hv312">0.270</div>
+				</div>
+				<div class="cb-box12">
+					<div class="cb12">197.15</div>
+				</div>
+				<div class="ad-box12">
+					<div class="ad12">200</div>
+				</div>
+				<div class="payment-box12">
+					<div class="payment12">200</div>
+				</div>
+			</div>
+		</div>
+			<div class="energy-text">
+				<p>For energy conservation please visit 
+					<br/>
+					our website www.sngpl.com.pk
+				</p>
+			</div>
+		<div class="energy-row">
+			<div class="energy-box">
+				<div class="energy-text1">For Emergencies and
+				<br/>
+				 Complaints Please Call
+				 <br/>
+				 1199
+				</div>
+			</div>
+			<div class="dom-box1">
+				<div class="dom">DOM</div>
+				<div class="dom-line1">
+				</div>
+				<div class="gasrates">Gas Rates w.e.f.27-09-2018</div>
+				<div class="gas-line1">
+				</div>
+				<div class="slab-row">
+					<div class="slab-box0">
+						<div class="slab">Slab</div>
+					</div>
+					<div class="usage-box">
+					  <div class="usageofgas">Usage of Gas in Hm3</div>
+					</div>
+					<div class="allofftakes-box">
+					  <div class="alloff-takes">Alloff-takesatflat-rateofRsperMMBTU</div>
+					</div>
+				</div>
+				<div class="slab-row1">
+					<div class="slab-box1">
+						<div class="slabno1">1</div>
+					</div>
+					<div class="usage-box1">
+					  <div class="upto50">Up to .50</div>
+					</div>
+					<div class="allofftakes-box1">
+					  <div class="alloff-takes1">121</div>
+					</div>
+				</div>
+				<div class="slab-row2">
+					<div class="slab-box2">
+						<div class="slabno2">2</div>
+					</div>
+					<div class="usage-box2">
+					  <div class="upto1.0">Up to 1.00</div>
+					</div>
+					<div class="allofftakes-box2">
+					  <div class="alloff-takes2">127</div>
+					</div>
+				</div>
+				<div class="slab-row3">
+					<div class="slab-box3">
+						<div class="slabno3">3</div>
+					</div>
+					<div class="usage-box3">
+					  <div class="upto2.0">Up to 2.00</div>
+					</div>
+					<div class="allofftakes-box3">
+					  <div class="alloff-takes3">264</div>
+					</div>
+				</div>
+				<div class="slab-row4">
+					<div class="slab-box4">
+						<div class="slabno4">4</div>
+					</div>
+					<div class="usage-box4">
+					  <div class="upto3.0">Up to 3.00</div>
+					</div>
+					<div class="allofftakes-box4">
+					  <div class="alloff-takes4">275</div>
+					</div>
+				</div>
+				<div class="slab-row5">
+					<div class="slab-box5">
+						<div class="slabno5">5</div>
+					</div>
+					<div class="usage-box5">
+					  <div class="upto4.0">Up to 4.00</div>
+					</div>
+					<div class="allofftakes-box5">
+					  <div class="alloff-takes5">780</div>
+					</div>
+				</div>
+				<div class="slab-row6">
+					<div class="slab-box6">
+						<div class="slabno6">6</div>
+					</div>
+					<div class="usage-box6">
+					  <div class="upto5.0">Up to 5.00</div>
+					</div>
+					<div class="allofftakes-box6">
+					  <div class="alloff-takes6">1460</div>
+					</div>
+				</div>
+				<div class="slab-row7">
+					<div class="slab-box7">
+						<div class="slabno7">7</div>
+					</div>
+					<div class="usage-box7">
+					  <div class="upto5.0">Over 5.00</div>
+					</div>
+					<div class="allofftakes-box7">
+					  <div class="alloff-takes7">1460</div>
+					</div>
+				</div>
+				<div class="usageofgas-based">Usage of Gas based in 30 Days</div>		
+			</div>
+		</div>
+		<div class="dotted-line">
+		</div>
+		<div class="suigas-bluebox">
+			<div class="suigasbluebox-row">
+				<div class="suigas-logo">
+					<img src="C:\Users\user\Desktop/suigaslogo-removebg-preview.png">
+				</div>
+				<div class="suigaspipeline"><h2>SUI NORTHERN GAS PIPELINE LIMITED</h2></div>
+				<div class="suigas-whitebox">
+					<div class="suigas-text1">
+							<b>
+							Bar Code
+						   </b>
+						   <div class="suigas-num1">03000000033333-987878778787788866-454535</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="amountid1">Amount ID</div>
+		<div class="amount-id1">2456774398</div>
+		<div class="bm1">Billing Month</div>
+		<div class="dec2018">Dec 2018</div>
+		<div class="name1">Name</div>
+		<div class="maslam">M ASLAM</div>
+		<div class="last-row">
+			<div class="blank-box">
+			</div>
+			<div class="ami">Amount ID</div>
+			<div class="id1"><b>2365757577</b></div>
+		</div>
+		<div class="pwd-row">
+				<div class="pwd-box">
+					<div class="pwd-text">Payable within<br/>due date (Rs)</div>
+				</div>
+				<div class="pwd-box1">
+					<div class="pwd-text1">Amount after due<br/> date (Rs)</div>
+				</div>
+				<div class="pwd-box2">
+					<div class="pwd-text2">Due date (Rs)</div>
+				</div>
+		</div>
+		<div class="pwd-row1">
+				
+					<div class="pwd-text3">1710</div>
+					<div class="pwd-text4">1880</div>
+					<div class="pwd-text5">15-01-2019</div>
+		</div>
+		<div class="line">
+		</div>
+		
+	</div>
+
+</body>
+</html>
